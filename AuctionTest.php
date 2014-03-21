@@ -10,7 +10,7 @@ class AuctionTest extends PHPUnit_Framework_TestCase {
 	private $repo;
 	
 	protected function setUp() {
-        date_default_timezone_set('UTC');
+ 		date_default_timezone_set('UTC');
 		$this->repo = Repository::getInstance();
 		$this->repo->beginTransaction();
 	}
