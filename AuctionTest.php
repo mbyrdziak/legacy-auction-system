@@ -34,7 +34,7 @@ class AuctionTest extends PHPUnit_Framework_TestCase {
 		$auction = new Auction($context, "Karma dla kota", $startTime, $endTime, AuctionType::BUY_NOW, 0, 1000);
 		$this->repo->persist($auction);
 		
-		$this->assertEquals(0, count($auction->getBids()));
+		$this->assertEquals(1, count($auction->getBids()));
 		$this->assertEquals("Karma dla kota", $auction->getName());
 		$this->assertEquals($startTime, $auction->getStartTime());
 		$this->assertEquals($endTime, $auction->getEndTime());
